@@ -17,7 +17,8 @@ public class LoginToBankTest extends BaseClass {
 		wt.waitForPageLoad(driver);
 		hp.getstaffLoginLink().click();
 		StaffLoginPage sp = new StaffLoginPage(driver);
-		sp.staffLogin(pf.getDataFromPropertiesFile("username"), pf.getDataFromPropertiesFile("password"),driver);
+		//sp.staffLogin(pf.getDataFromPropertiesFile("username"), pf.getDataFromPropertiesFile("password"),driver);
+	   sp.staffLogin(System.getProperty("username"),System.getProperty("password"), driver);
 	}
 	/*@Test
 	public void createOpenAccountTest() throws Exception {

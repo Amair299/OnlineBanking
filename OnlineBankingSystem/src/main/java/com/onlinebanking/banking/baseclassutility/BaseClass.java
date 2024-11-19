@@ -26,7 +26,8 @@ public class BaseClass {
 	@BeforeClass
 	public void configBC() throws Exception {
 		System.out.println("Before class annotation");
-		String browser = pf.getDataFromPropertiesFile("browser");
+		//String browser = pf.getDataFromPropertiesFile("browser");
+		String browser = System.getProperty("browser");
 		if (browser.equals("firefox")) {
 			driver = new FirefoxDriver();
 		} else if (browser.equals("chrome")) {
@@ -34,7 +35,8 @@ public class BaseClass {
 		} else if (browser.equals("edge")) {
 			driver = new EdgeDriver();
 		}
-		String url = pf.getDataFromPropertiesFile("url");
+		//String url = pf.getDataFromPropertiesFile("url");
+		String url=System.getProperty("url");
 		driver.get(url);
 		
 	}
