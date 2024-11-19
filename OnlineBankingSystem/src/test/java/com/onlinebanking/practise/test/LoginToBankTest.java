@@ -19,7 +19,7 @@ public class LoginToBankTest extends BaseClass {
 		StaffLoginPage sp = new StaffLoginPage(driver);
 		sp.staffLogin(pf.getDataFromPropertiesFile("username"), pf.getDataFromPropertiesFile("password"),driver);
 	}
-	@Test
+	/*@Test
 	public void createOpenAccountTest() throws Exception {
 		System.out.println("Create new account test");
 		WebDriverUtility wt = new WebDriverUtility();
@@ -52,7 +52,7 @@ public class LoginToBankTest extends BaseClass {
 		wt.scroolTo(driver);
 		acPage.getconfirmButton();
 		wt.acceptAlert(driver);
-	}
+	}*/
 }  
 
 

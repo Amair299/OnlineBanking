@@ -5,7 +5,7 @@
   <artifactId>OnlineBankingSystem</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
-   <maven.compiler.target>1.8 </maven.compiler.target>
+   <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
 </properties>
 
@@ -55,9 +55,7 @@
     <version>9.0.0</version>
 </dependency>
 </dependencies>
-<profiles>
-<profile>
-  <id>Tn</id>
+
  <build>
 <plugins>
       <plugin>
@@ -72,6 +70,5 @@
       </plugin>
 </plugins>
 </build>
-</profile>
-</profiles>
+
 </project>
