@@ -6,6 +6,7 @@
       <class name="com.onlinebanking.practise.test.LoginToBankTest">
       <methods>
          <include name="loginAsStaffTest"/>
+         <include name="createOpenAccountTest"/>
       </methods>
       </class>
     </classes>

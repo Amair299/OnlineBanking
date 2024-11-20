@@ -17,7 +17,7 @@ public class WebDriverUtility {
 	
 	public void scroolTo(WebDriver driver) {
 		JavascriptExecutor  j1 = (JavascriptExecutor) driver;
-		j1.executeScript("window.scrollBy(0,2000)","");
+		j1.executeScript("window.scrollBy(0,4000)","");
 	}
 	
 	public void selectFromDropDown(String value,WebElement element) {

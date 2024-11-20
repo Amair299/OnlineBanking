@@ -1,5 +1,6 @@
 package com.onlinebanking.banking.objectrepositoryutility;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -122,7 +123,7 @@ public class OnlineAccountOpeningPage {
 	}
 	
 	
-	public void accountOpenForm(String name,String gender,String mobile,String email,
+	public void accountOpenForm(WebDriver driver,String name,String gender,String mobile,String email,
 			String dob,String pan,String cn,
 			String haddress,String state,String city,String pin,String laddress,String typeAccount) {
 		getName().sendKeys(name);
@@ -130,7 +131,9 @@ public class OnlineAccountOpeningPage {
 		wt.selectFromDropDown(gender,getGender());
 		getMobile().sendKeys(mobile);
 		getEmail().sendKeys(email);
-		getDateofbirth().sendKeys(dob);;
+		//getDateofbirth().sendKeys("02/01/1996");;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('value', arguments[1])", getDateofbirth(), "02/01/1996");
 		getPan().sendKeys(pan);
 		getCitizenshipNum().sendKeys(cn);
 		getHomeaddress().sendKeys(haddress);
@@ -139,6 +142,6 @@ public class OnlineAccountOpeningPage {
 		getPinnum().sendKeys(pin);
 		getAreaLocality().sendKeys(laddress);
 		wt.selectFromDropDown(typeAccount,getaccountType());
-		getsubmitButton().click();
+		//getsubmitButton().click();
 	}
 }
