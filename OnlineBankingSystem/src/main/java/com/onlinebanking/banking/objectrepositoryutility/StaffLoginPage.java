@@ -34,7 +34,6 @@ public class StaffLoginPage {
 	 public void staffLogin(String un,String pwd,WebDriver driver) {
 		 getstaffUsername().sendKeys(un);
 		 getstaffPassword().sendKeys(pwd);
-		 wt.scroolTo(driver);
 		 getloginBtn().click();
 	 }
 }

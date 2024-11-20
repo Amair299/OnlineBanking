@@ -15,9 +15,9 @@ public class WebDriverUtility {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 	}
 	
-	public void scroolTo(WebDriver driver) {
+	public void scroolTo(WebDriver driver,String px) {
 		JavascriptExecutor  j1 = (JavascriptExecutor) driver;
-		j1.executeScript("window.scrollBy(0,4000)","");
+		j1.executeScript("window.scrollBy(0,1000)","");
 	}
 	
 	public void selectFromDropDown(String value,WebElement element) {

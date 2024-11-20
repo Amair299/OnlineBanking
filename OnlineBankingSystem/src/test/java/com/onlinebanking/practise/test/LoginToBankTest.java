@@ -16,6 +16,7 @@ public class LoginToBankTest extends BaseClass {
 		WebDriverUtility wt = new WebDriverUtility();
 		wt.waitForPageLoad(driver);
 		hp.getstaffLoginLink().click();
+		wt.scroolTo(driver,"100");
 		StaffLoginPage sp = new StaffLoginPage(driver);
 		//sp.staffLogin(pf.getDataFromPropertiesFile("username"), pf.getDataFromPropertiesFile("password"),driver);
 	   sp.staffLogin(System.getProperty("username"),System.getProperty("password"), driver);
@@ -26,7 +27,7 @@ public class LoginToBankTest extends BaseClass {
 		WebDriverUtility wt = new WebDriverUtility();
 		ExcelFileUtility exe = new ExcelFileUtility();
 		HomePage hp = new HomePage(driver);
-		wt.scroolTo(driver);
+		wt.scroolTo(driver,"2000");
 		hp.getopenAccountLink().click();
 		OnlineAccountOpeningPage acPage = new OnlineAccountOpeningPage(driver);
 		String name = exe.getDataFromExcel("CustData", 1, 1);
@@ -48,10 +49,10 @@ public class LoginToBankTest extends BaseClass {
 		String acctype = exe.getDataFromExcel("CustData", 1, 13);
 		//wt.selectFromDropDown(acctype,acPage.getaccountType());
 		acPage.accountOpenForm(driver,name, gender, mobile, email, dob, pan, cn, haddress, state, city, pin, area, acctype);
-		wt.scroolTo(driver);
+		wt.scroolTo(driver,"1500");
 		acPage.getsubmitButton().click();
 		//Thread.sleep(3000);
-		wt.scroolTo(driver);
+		wt.scroolTo(driver,"1500");
 		acPage.getconfirmButton().click();
 		Thread.sleep(6000);
 		wt.acceptAlert(driver);
