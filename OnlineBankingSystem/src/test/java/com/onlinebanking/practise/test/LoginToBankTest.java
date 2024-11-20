@@ -24,9 +24,9 @@ public class LoginToBankTest extends BaseClass {
 	public void createOpenAccountTest() throws Exception {
 		System.out.println("Create new account test");
 		WebDriverUtility wt = new WebDriverUtility();
-		wt.scroolTo(driver);
 		ExcelFileUtility exe = new ExcelFileUtility();
 		HomePage hp = new HomePage(driver);
+		wt.scroolTo(driver);
 		hp.getopenAccountLink().click();
 		OnlineAccountOpeningPage acPage = new OnlineAccountOpeningPage(driver);
 		String name = exe.getDataFromExcel("CustData", 1, 1);
@@ -49,7 +49,7 @@ public class LoginToBankTest extends BaseClass {
 		//wt.selectFromDropDown(acctype,acPage.getaccountType());
 		acPage.accountOpenForm(driver,name, gender, mobile, email, dob, pan, cn, haddress, state, city, pin, area, acctype);
 		wt.scroolTo(driver);
-		acPage.getsubmitButton().click();;
+		acPage.getsubmitButton().click();
 		//Thread.sleep(3000);
 		wt.scroolTo(driver);
 		acPage.getconfirmButton().click();
